@@ -6,87 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="horizontal"
-    android:background="@color/myc1"
+    android:background="@color/white"
     >
 
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:background="@color/myc1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
 
-        >
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            >
 
-    </View>
+        </View>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/loginpanel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:ignore="MissingConstraints" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/loginpanel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:ignore="MissingConstraints"
+            />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="EduConnect"
-        android:textSize="24dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="185dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Since 2023"
-        android:fontFamily="monospace"
-        android:textColor="@color/grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="217dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="EduConnect"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="185dp" />
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Since 2023"-->
+<!--            android:fontFamily="monospace"-->
+<!--            android:textColor="@color/grey"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            tools:layout_editor_absoluteY="217dp" />-->
 
     <androidx.cardview.widget.CardView
 
         android:id="@+id/loginpanel"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/myc4"
         app:cardCornerRadius="8dp"
+
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.428"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
             android:layout_marginTop="5dp"
             android:fontFamily="monospace"
             android:text="Login"
             android:textAlignment="center"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,22 +136,15 @@
             android:hint="Enter password "
             android:minHeight="48dp" />
 
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:elevation="4dp"
+            android:text="Login"
+            android:layout_gravity="center_horizontal"/>
+
 
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        app:layout_constraintBottom_toBottomOf="@+id/loginpanel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpanel"
-        app:layout_constraintVertical_bias="0.633"
-        tools:ignore="MissingConstraints"
-
-        />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
