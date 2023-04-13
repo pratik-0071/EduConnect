@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assignments"
+        android:textSize="35dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/AIcard"
+                android:layout_width="344dp"
+                android:layout_height="249dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/myc1"
+                app:cardCornerRadius="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Devyani Kamble"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="160dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Artificial Intelligence"
+                    android:textSize="30dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="210dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="1 assignment due today"
+                    android:textSize="16dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ANDcard"
+                android:layout_width="344dp"
+                android:layout_height="249dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/myc4"
+                app:cardCornerRadius="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Swapnil Goje"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="160dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Android Programming"
+                    android:textSize="30dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="210dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="1 assignment due today"
+                    android:textSize="16dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ADScard"
+                android:layout_width="344dp"
+                android:layout_height="249dp"
+                android:layout_marginLeft="7dp"
+                app:cardCornerRadius="30dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/purple_200"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Sagar Kulkarni"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="110dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Algorithms and Design Strategies"
+                    android:textSize="30dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="210dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="1 assignment due today"
+                    android:textSize="16dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/NGDBcard"
+                android:layout_width="344dp"
+                android:layout_height="249dp"
+                android:layout_marginLeft="7dp"
+                app:cardCornerRadius="30dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/myc5"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Gopal Sakarkar"
+                    android:textSize="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="110dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Next Gen Databases (Elective)"
+                    android:textSize="30dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="210dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="1 assignment due today"
+                    android:textSize="16dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
