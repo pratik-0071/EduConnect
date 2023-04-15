@@ -1,5 +1,6 @@
 package com.example.educonnect;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -25,6 +26,9 @@ public class Dashboard extends AppCompatActivity implements BottomNavigationView
     FirebaseAuth mAuth;
     FirebaseFirestore db;
 
+    CardView c1,c2,c3,c4;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,10 @@ public class Dashboard extends AppCompatActivity implements BottomNavigationView
         db = FirebaseFirestore.getInstance();
 
         bnvd = findViewById(R.id.bnvd);
+        c1 = (CardView) findViewById(R.id.c1);
+        c2 = (CardView) findViewById(R.id.c2);
+        c3 = (CardView) findViewById(R.id.c3);
+        c4 = (CardView) findViewById(R.id.c4);
 
         bnvd.setOnNavigationItemSelectedListener(this);
         bnvd.setSelectedItemId(R.id.dash);
@@ -61,4 +69,6 @@ public class Dashboard extends AppCompatActivity implements BottomNavigationView
         }
         return false;
     }
+
+
 }

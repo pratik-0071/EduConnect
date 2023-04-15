@@ -16,10 +16,10 @@ public class AssignmentPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignment_page);
 
-        CardView AIcard = (CardView) findViewById(R.id.AIcard);
-        CardView ANDcard = (CardView) findViewById(R.id.ANDcard);
-        CardView ADScard = (CardView) findViewById(R.id.ADScard);
-        CardView NGDBcard = (CardView) findViewById(R.id.NGDBcard);
+        CardView AIcard = (CardView) findViewById(R.id.AICARD);
+        CardView ANDcard = (CardView) findViewById(R.id.ANDCARD);
+        CardView ADScard = (CardView) findViewById(R.id.ADSCARD);
+        CardView NGDBcard = (CardView) findViewById(R.id.NGDBCARD);
 
         AIcard.setOnClickListener(new View.OnClickListener() {
             @Override

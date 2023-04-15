@@ -16,7 +16,7 @@
         android:textSize="35dp"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
-        android:layout_marginLeft="75dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="10dp"/>
 
     <ScrollView
@@ -30,7 +30,7 @@
             android:layout_marginTop="10dp">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/AIcard"
+                android:id="@+id/AICARD"
                 android:layout_width="344dp"
                 android:layout_height="249dp"
                 android:layout_marginLeft="7dp"
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="150dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Devyani Kamble"
                     android:textSize="16dp" />
@@ -51,26 +51,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="160dp"
+                    android:layout_marginTop="180dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Artificial Intelligence"
                     android:textSize="30dp"
 
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="210dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="1 assignment due today"
-                    android:textSize="16dp" />
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ANDcard"
+                android:id="@+id/ANDCARD"
                 android:layout_width="344dp"
                 android:layout_height="249dp"
                 android:layout_marginLeft="7dp"
@@ -82,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="110dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Swapnil Goje"
                     android:textSize="16dp" />
@@ -91,26 +84,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="160dp"
+                    android:layout_marginTop="140dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Android Programming"
                     android:textSize="30dp"
 
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="210dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="1 assignment due today"
-                    android:textSize="16dp" />
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ADScard"
+                android:id="@+id/ADSCARD"
                 android:layout_width="344dp"
                 android:layout_height="249dp"
                 android:layout_marginLeft="7dp"
@@ -122,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="100dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Sagar Kulkarni"
                     android:textSize="16dp"/>
@@ -131,26 +117,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="110dp"
+                    android:layout_marginTop="130dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Algorithms and Design Strategies"
                     android:textSize="30dp"
 
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="210dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="1 assignment due today"
-                    android:textSize="16dp"/>
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/NGDBcard"
+                android:id="@+id/NGDBCARD"
                 android:layout_width="344dp"
                 android:layout_height="249dp"
                 android:layout_marginLeft="7dp"
@@ -177,14 +156,7 @@
 
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="210dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="1 assignment due today"
-                    android:textSize="16dp"/>
+
 
             </androidx.cardview.widget.CardView>
 

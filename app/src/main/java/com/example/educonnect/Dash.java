@@ -1,7 +1,9 @@
 package com.example.educonnect;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,7 +15,11 @@ import android.view.ViewGroup;
  * Use the {@link Dash#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+
 public class Dash extends Fragment {
+
+    CardView c1,c2,c3,c4;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,9 +30,6 @@ public class Dash extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Dash() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -49,6 +52,9 @@ public class Dash extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -59,6 +65,40 @@ public class Dash extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dash, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_dash, container, false);
+
+        c1 = (CardView) view.findViewById(R.id.c1);
+        c2 = (CardView) view.findViewById(R.id.c2);
+        c3 = (CardView) view.findViewById(R.id.c3);
+        c4 = (CardView) view.findViewById(R.id.c4);
+
+
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(view.getContext(), AssignmentPage.class);
+                i.putExtra("Value1", "Android By Javatpoint");
+                startActivity(i);
+            }
+        });
+
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), Notes.class);
+                startActivity(i);
+            }
+        });
+
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), TimetablePageAdmin.class);
+                startActivity(i);
+            }
+        });
+
+        return view;
+    };
+
 }

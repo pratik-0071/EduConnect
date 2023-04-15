@@ -17,16 +17,33 @@
         android:theme="@style/Theme.EduConnect"
         tools:targetApi="31">
         <activity
-            android:name=".Notes"
-            android:exported="false" />
-        <activity
-            android:name=".Splash"
-            android:exported="true">
+            android:name=".NotesTeacher"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".NGDBNotes"
+            android:exported="false" />
+        <activity
+            android:name=".ADSNotes"
+            android:exported="false" />
+        <activity
+            android:name=".AndroidNotes"
+            android:exported="false" />
+        <activity
+            android:name=".AINotes"
+            android:exported="false" />
+        <activity
+            android:name=".Notes"
+            android:exported="false"></activity>
+        <activity
+            android:name=".Splash"
+            android:exported="false">
+
         </activity>
         <activity
             android:name=".Messages"
@@ -57,7 +74,7 @@
             android:exported="false" />
         <activity
             android:name=".TimetablePageAdmin"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".AssignmentPageTeacher2"
             android:exported="false" />
