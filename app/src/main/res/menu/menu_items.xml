@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-        <item android:id="@+id/message"
+
+    <item android:id="@+id/message"
             android:icon="@drawable/baseline_message_24"
             android:title="Messaging"/>
 
@@ -8,7 +9,7 @@
         android:icon="@drawable/baseline_dashboard_24"
         android:title="Dashboard"/>
 
-    <item android:id="@+id/Setting"
+    <item android:id="@+id/setting"
         android:icon="@drawable/baseline_settings_24"
         android:title="Settings"/>
 

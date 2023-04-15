@@ -19,6 +19,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -136,6 +137,8 @@ public class TimetablePageAdmin extends AppCompatActivity {
                                 getContentResolver(),
                                 filePath);
                 imageView.setImageBitmap(bitmap);
+
+
             }
 
             catch (IOException e) {
@@ -162,6 +165,8 @@ public class TimetablePageAdmin extends AppCompatActivity {
                     .child(
                             "images/"
                                     + UUID.randomUUID().toString());
+            // Load image from Firebase Storage using Glide
+
 
             // adding listeners on upload
             // or failure of image
