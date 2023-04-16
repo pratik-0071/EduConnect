@@ -77,7 +77,6 @@ public class Dash extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(view.getContext(), AssignmentPage.class);
-                i.putExtra("Value1", "Android By Javatpoint");
                 startActivity(i);
             }
         });
@@ -93,7 +92,7 @@ public class Dash extends Fragment {
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), TimetablePageAdmin.class);
+                Intent i = new Intent(v.getContext(), MainActivity.class);
                 startActivity(i);
             }
         });

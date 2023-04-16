@@ -178,6 +178,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:id="@+id/abtus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"

@@ -25,7 +25,7 @@ public class Notes extends AppCompatActivity {
         AI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, AINotes.class);
+                Intent i = new Intent(Notes.this, Retrieve.class);
                 startActivity(i);
             }
         });
@@ -33,7 +33,7 @@ public class Notes extends AppCompatActivity {
         AND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, AndroidNotes.class);
+                Intent i = new Intent(Notes.this, Retrieve.class);
                 startActivity(i);
             }
         });
@@ -41,7 +41,7 @@ public class Notes extends AppCompatActivity {
         ADS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, ADSNotes.class);
+                Intent i = new Intent(Notes.this, Retrieve.class);
                 startActivity(i);
             }
         });
@@ -49,7 +49,7 @@ public class Notes extends AppCompatActivity {
         NGDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, NGDB.class);
+                Intent i = new Intent(Notes.this, Retrieve.class);
                 startActivity(i);
             }
         });

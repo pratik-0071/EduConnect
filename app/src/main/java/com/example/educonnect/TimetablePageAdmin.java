@@ -42,7 +42,7 @@ public class TimetablePageAdmin extends AppCompatActivity {
     private Uri filePath;
 
     // request code
-    private final int PICK_IMAGE_REQUEST = 22;
+    private final int PICK_IMAGE_REQUEST = 2;
 
     // instance for firebase storage and StorageReference
     FirebaseStorage storage;
@@ -160,68 +160,57 @@ public class TimetablePageAdmin extends AppCompatActivity {
             progressDialog.show();
 
             // Defining the child of storageReference
-            StorageReference ref
-                    = storageReference
-                    .child(
-                            "images/"
-                                    + UUID.randomUUID().toString());
+            StorageReference imageRef = storage.getReference().child("images/myimage.jpg");
+
+
             // Load image from Firebase Storage using Glide
+
+
 
 
             // adding listeners on upload
             // or failure of image
-            ref.putFile(filePath)
-                    .addOnSuccessListener(
-                            new OnSuccessListener<UploadTask.TaskSnapshot>() {
-
+            imageRef.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            // Get the download URL of the uploaded image
+                            imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
-                                public void onSuccess(
-                                        UploadTask.TaskSnapshot taskSnapshot)
-                                {
+                                public void onSuccess(Uri uri) {
+                                    // Load the image into the ImageView using Glide
 
-                                    // Image uploaded successfully
+
+
                                     // Dismiss dialog
                                     progressDialog.dismiss();
-                                    Toast
-                                            .makeText(TimetablePageAdmin.this,
+                                    Toast.makeText(TimetablePageAdmin.this,
                                                     "Image Uploaded!!",
                                                     Toast.LENGTH_SHORT)
                                             .show();
                                 }
-                            })
-
+                            });
+                        }
+                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
-                        public void onFailure(@NonNull Exception e)
-                        {
-
+                        public void onFailure(@NonNull Exception e) {
                             // Error, Image not uploaded
                             progressDialog.dismiss();
-                            Toast
-                                    .makeText(TimetablePageAdmin.this,
+                            Toast.makeText(TimetablePageAdmin.this,
                                             "Failed " + e.getMessage(),
                                             Toast.LENGTH_SHORT)
                                     .show();
                         }
                     })
-                    .addOnProgressListener(
-                            new OnProgressListener<UploadTask.TaskSnapshot>() {
-
-                                // Progress Listener for loading
-                                // percentage on the dialog box
-                                @Override
-                                public void onProgress(
-                                        UploadTask.TaskSnapshot taskSnapshot)
-                                {
-                                    double progress
-                                            = (100.0
-                                            * taskSnapshot.getBytesTransferred()
-                                            / taskSnapshot.getTotalByteCount());
-                                    progressDialog.setMessage(
-                                            "Uploaded "
-                                                    + (int)progress + "%");
-                                }
-                            });
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            // Show progress dialog
+                            double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
+                            progressDialog.setMessage("Uploaded " + (int) progress + "%");
+                        }
+                    });
         }
     }
 }

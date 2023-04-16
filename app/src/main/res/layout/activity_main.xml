@@ -4,147 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="horizontal"
-    android:background="@color/white"
-    >
+    tools:context=".MainActivity">
 
-
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            >
-
-        </View>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/logo"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/loginpanel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view"
-            tools:ignore="MissingConstraints"
-            />
-
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="EduConnect"
-            android:textSize="24dp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="185dp" />
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Since 2023"-->
-<!--            android:fontFamily="monospace"-->
-<!--            android:textColor="@color/grey"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            tools:ignore="MissingConstraints"-->
-<!--            tools:layout_editor_absoluteY="217dp" />-->
-
-    <androidx.cardview.widget.CardView
-
-        android:id="@+id/loginpanel"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/myc4"
-        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Timetable for Sem-II"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#c0c0c0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:src="@drawable/baseline_image_24" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.428"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:fontFamily="monospace"
-            android:text="Login"
-            android:textAlignment="center"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="14dp"
-            android:layout_marginTop="70dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Email ID"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="100dp"
-            android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
-            android:hint="Enter email id"
-            android:minHeight="48dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="14dp"
-            android:layout_marginTop="160dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Password"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="200dp"
-            android:drawableLeft="@drawable/ic_baseline_info_24"
-            android:fontFamily="sans-serif-light"
-            android:hint="Enter password "
-            android:minHeight="48dp" />
-
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="270dp"
-            android:elevation="4dp"
-            android:textSize="16dp"
-            android:text="Login"
-            android:layout_gravity="center_horizontal"/>
-
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.67"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

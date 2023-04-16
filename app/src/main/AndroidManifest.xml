@@ -17,6 +17,12 @@
         android:theme="@style/Theme.EduConnect"
         tools:targetApi="31">
         <activity
+            android:name=".Retrieve"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
             android:name=".NotesTeacher"
             android:exported="true" >
             <intent-filter>
@@ -39,7 +45,7 @@
             android:exported="false" />
         <activity
             android:name=".Notes"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Splash"
             android:exported="false">
@@ -68,10 +74,13 @@
             android:exported="false" />
         <activity
             android:name=".SettingsPage"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".RegisterPage"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".TimetablePageAdmin"
             android:exported="false" />
@@ -96,6 +105,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
