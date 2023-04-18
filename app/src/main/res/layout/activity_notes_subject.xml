@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Notes">
+    tools:context=".NotesSubject"
+    tools:ignore="MissingDefaultResource">
+
 
     <TextView
         android:layout_width="wrap_content"

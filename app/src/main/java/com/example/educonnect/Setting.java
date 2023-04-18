@@ -1,16 +1,26 @@
 package com.example.educonnect;
 
+import static android.app.ProgressDialog.show;
+
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +30,9 @@ import android.widget.TextView;
 public class Setting extends Fragment {
 
     TextView abtus;
+    private Switch darkModeSwitch;
+    Button logoutbtn,editbtn;
+    private RatingBar ratingBar;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +74,8 @@ public class Setting extends Fragment {
         }
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,7 +83,40 @@ public class Setting extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_setting, container, false);
 
         abtus = (TextView) view.findViewById(R.id.abtus);
+        darkModeSwitch = view.findViewById(R.id.dm);
+        ratingBar = view.findViewById(R.id.rb);
+        logoutbtn = view.findViewById(R.id.logoutbtn);
+        editbtn = view.findViewById(R.id.editbtn);
 
+
+
+        darkModeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // Enable dark mode
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    // Disable dark mode
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
+
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                // Handle rating changes
+            }
+        });
+
+        editbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent s = new Intent(view.getContext(), SettingsPage2.class);
+                startActivity(s);
+            }
+        });
 
         abtus.setOnClickListener(new View.OnClickListener() {
             @Override

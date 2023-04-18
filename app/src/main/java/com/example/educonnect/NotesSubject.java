@@ -7,15 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+public class NotesSubject extends AppCompatActivity {
 
-public class Notes extends AppCompatActivity {
-
-    CardView AI, AND, NGDB, ADS;
+    CardView AI, AND, ADS, NGDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes);
+        setContentView(R.layout.activity_notes_subject);
 
         AI = (CardView) findViewById(R.id.AI);
         AND = (CardView) findViewById(R.id.AND);
@@ -25,33 +24,31 @@ public class Notes extends AppCompatActivity {
         AI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, AIRetrieve.class);
+                Intent i = new Intent(NotesSubject.this, AINotes.class);
                 startActivity(i);
             }
         });
-
         AND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, AndroidRetrieve.class);
+                Intent i = new Intent(NotesSubject.this, AndroidNotes.class);
                 startActivity(i);
             }
         });
-
         ADS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Notes.this, Retrieve.class);
+                Intent i = new Intent(NotesSubject.this, ADSNotes.class);
+                startActivity(i);
+            }
+        });
+        NGDB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(NotesSubject.this, NGDBNotes.class);
                 startActivity(i);
             }
         });
 
-        NGDB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Notes.this, Retrieve.class);
-                startActivity(i);
-            }
-        });
     }
 }

@@ -1,34 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
-    android:orientation="vertical"
     tools:context=".ADSNotes">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Algorithm and Design Strategies"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/poppins_medium"
-        />
-    <View
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
-        android:layout_marginTop="10dp"
-        android:background="#c0c0c0" />
-
-    <ListView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
+        android:padding="20dp"
+        >
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Algorithm Design Strategies "
+            android:textSize="27sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.03"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@id/ll1"
+        android:layout_marginTop="60dp"
+        android:layout_margin="20dp"
+        android:hint="tap to select file"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.02"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="upload_file"
+        android:textSize="19sp"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.06"
+        android:textAllCaps="false"
+        android:id="@+id/btn"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:text="All Notes"
+        android:textSize="19sp"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.06"
+        android:textAllCaps="false"
+        android:id="@+id/btnRead"
+        android:onClick="retrievePDFs"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
